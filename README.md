@@ -31,7 +31,8 @@ See [Known good configuration](https://github.com/tektoncd/pipeline/blob/master/
 
 ### Install Tekton Dashboard
 ```bash
-$ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 9097:9097
+$ git clone https://github.com/tektoncd/dashboard && cd dashboard
+$ kubectl apply -f config/release/gcr-tekton-dashboard.yaml
 ```
 
 ### Preparing run locally
