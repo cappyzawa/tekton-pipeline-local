@@ -43,15 +43,15 @@ DockerRegistry: http://localhost:5000
 DockerRegistryUI: http://localhost:8080
 TektonDashboard: http://localhost:9097
 
-### Running
+### Running [Tutorial](https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md)
 #### [Task](https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md#task)
 ```bash
-$ kubectl apply -f examples/hello_world.yaml
+$ kubectl apply -f examples/task.yaml
 ```
 
 #### [Task Inputs and Outputs](https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md#task-inputs-and-outputs)
 ```bash
-$ kubectl apply -f examples/docker_build.yaml
+$ kubectl apply -f examples/task_inputs_and_outputs.yaml
 ```
 
 
