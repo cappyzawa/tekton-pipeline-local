@@ -11,7 +11,7 @@ $ kubectl create clusterrolebinding cluster-admin-binding \
 
 ### Adding the Tekton Pipelines
 ```bash
-$ kubectl apply --filename https://storage.googleapis.com/tekton-releases/latest/release.yaml
+$ curl -L https://github.com/tektoncd/pipeline/releases/download/v0.5.2/release.yaml | kubectl apply -f -
 ```
 
 ```bash
@@ -55,4 +55,7 @@ $ kubectl apply -f examples/task.yaml
 $ kubectl apply -f examples/task_inputs_and_outputs.yaml
 ```
 
-
+#### [Pipeline](https://github.com/tektoncd/pipeline/blob/master/docs/tutorial.md#pipeline)
+```bash
+$ kubectl apply -f examples/pipeline.yaml
+```
