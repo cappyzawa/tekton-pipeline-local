@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  registry-srv:
+    image: registry:2
+    ports:
+    - 5000:5000
+    environment:
+      REGISTRY_STORAGE_DELETE_ENABLED: 'true'
+  registry-web:
+    depends_on: [registry-srv]
+    image: hyper/docker-registry-web
+    ports:
+    - 8080:8080
+    environment:
+      REGISTRY_URL: http://registry-srv:5000/v2
+      REGISTRY_NAME: localhost:5000
