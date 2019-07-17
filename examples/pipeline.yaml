@@ -57,13 +57,13 @@ spec:
       type: image
     params:
     - name: path
-      desctiption: Path to the manifest to apply
+      description: Path to the manifest to apply
     - name: yqArg
-      desctiption:
+      description:
         Okay this is a hack, but I didn't feel right hard-coding `-d1` down
         below
     - name: yamlPathToImage
-      desctiption:
+      description:
         The path to the image to replace in the yaml manifest (arg to yq)
   steps:
   - name: replace-image
@@ -94,8 +94,8 @@ spec:
     name: tutorial-pipeline
   resources:
   - name: source-repo
-    resoruceRef:
+    resourceRef:
       name: skaffold-git
   - name: web-image
-    resoruceRef:
+    resourceRef:
       name: skaffold-image-leeroy-web
